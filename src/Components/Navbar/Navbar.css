@@ -2,6 +2,22 @@
     background-color: #374244;
     color: white;
 }
+
+.nav-links{
+    background-color: #475355;
+    border-color: #2B3335;
+}
+.nav-links :hover{
+    background-color: #FE7B2A;
+    border: 1px solid black;
+}
+
+.nav-links.active{
+    background-color: #FE7B2A;
+    border: 1px solid black;
+}
+
 .connect-wallet-button{
     background-color: #FE7B2A;
+    border-color: #2B3335;
 }

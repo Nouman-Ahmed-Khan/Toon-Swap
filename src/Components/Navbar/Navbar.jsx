@@ -12,11 +12,11 @@ const Navbar = () => {
       </div>
 
       <div>
-       <ul className='nav-links flex items-center gap-8'>
-         <li className='cursor-pointer'>Home</li>
-         <li className='cursor-pointer'>Toon Pad</li>
-         <li className='cursor-pointer'>Leaderboard</li>
-         <li className='cursor-pointer'>Docs</li>
+       <ul className='nav-links flex items-center gap-8 px-4 py-1 rounded-xl border-2'>
+         <li className='nav-links cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl active'>Home</li>
+         <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Toon Pad</li>
+         <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Leaderboard</li>
+         <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Docs</li>
        </ul>
       </div>
       
@@ -25,7 +25,7 @@ const Navbar = () => {
             <img src={telegram_icon} alt="telegram-logo" className='w-9 cursor-pointer'/>
             <img src={x_icon} alt="x-logo" className='w-9 cursor-pointer'/>
          </div>
-         <button type="button" className='connect-wallet-button rounded-2xl text-sm p-4'>Connect Wallet</button>
+         <button type="button" className='connect-wallet-button rounded-xl px-3 py-2 cursor-pointer font-semibold text-sm border-2'>Connect Wallet</button>
       </div>
     </div>
   )
