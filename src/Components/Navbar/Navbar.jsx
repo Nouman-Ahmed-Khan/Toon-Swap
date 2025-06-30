@@ -8,12 +8,12 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="mx-auto sm:px-12 sm:mr-3">
+    <div className="mx-auto px-4 sm:px-12 sm:mr-3">
       <div className='navbar flex items-center justify-around py-4 px-4 mt-5 rounded-2xl border-3'>
 
         {/* Logo */}
         <div className="flex items-center">
-          <img src={logo} alt="logo" className='w-32 sm:w-50'/>
+          <img src={logo} alt="logo" className='w-45 sm:w-50 cursor-pointer'/>
         </div>
 
         {/* Desktop Menu */}
@@ -27,7 +27,7 @@ const Navbar = () => {
           
         </div>
 
-          <div className='flex gap-4'>
+          <div className='gap-4 hidden sm:flex'>
             <div className="flex gap-2 items-center">
              <img src={telegram_icon} alt="telegram" className='w-7 sm:w-9 cursor-pointer'/>
              <img src={x_icon} alt="x" className='w-7 sm:w-9 cursor-pointer' />
@@ -52,18 +52,18 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className='md:hidden mt-2 bg-white shadow-md rounded-xl p-4'>
+        <div className='md:hidden mt-2 navbar shadow-md rounded-xl p-4'>
           <ul className='flex flex-col gap-4 mb-4'>
             <li className='cursor-pointer font-semibold text-sm'>Home</li>
             <li className='cursor-pointer font-semibold text-sm'>Toon Pad</li>
             <li className='cursor-pointer font-semibold text-sm'>Leaderboard</li>
             <li className='cursor-pointer font-semibold text-sm'>Docs</li>
           </ul>
-          <div className="flex gap-4 items-center mb-4">
+          <div className="flex gap-2 items-center mb-4">
             <img src={telegram_icon} alt="telegram" className='w-7 cursor-pointer' />
             <img src={x_icon} alt="x" className='w-7 cursor-pointer' />
           </div>
-          <button className='w-full rounded-xl px-3 py-2 cursor-pointer font-semibold text-sm border-2'>Connect Wallet</button>
+          <button className='w-full rounded-xl px-3 py-2 cursor-pointer font-semibold text-sm border-2 connect-wallet-button'>Connect Wallet</button>
         </div>
       )}
     </div>
