@@ -17,7 +17,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className='hidden md:flex items-center gap-8 sm:mr-45'>
+        <div className='hidden lg:flex items-center gap-8 xl:mr-45'>
           <ul className='flex nav-links items-center gap-6 px-4 py-1 rounded-xl border-2'>
             <li className='nav-links active cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl active'>Home</li>
             <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Toon Pad</li>
@@ -27,7 +27,7 @@ const Navbar = () => {
           
         </div>
 
-          <div className='gap-4 hidden sm:flex'>
+          <div className='gap-4 hidden lg:flex'>
             <div className="flex gap-2 items-center">
              <img src={telegram_icon} alt="telegram" className='w-7 sm:w-9 cursor-pointer'/>
              <img src={x_icon} alt="x" className='w-7 sm:w-9 cursor-pointer' />
@@ -37,7 +37,7 @@ const Navbar = () => {
           </div>
 
         {/* Mobile Burger Icon */}
-        <div className='md:hidden'>
+        <div className='lg:hidden'>
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-white-700 focus:outline-none nav-links p-2 rounded-xl">
             <svg className="w-6 h-6" fill="none"stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               {menuOpen ? (
@@ -52,7 +52,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className='md:hidden mt-2 navbar shadow-md rounded-xl p-4'>
+        <div className='lg:hidden mt-2 navbar shadow-md rounded-xl p-4'>
           <ul className='flex flex-col gap-4 mb-4'>
             <li className='cursor-pointer font-semibold text-sm'>Home</li>
             <li className='cursor-pointer font-semibold text-sm'>Toon Pad</li>
