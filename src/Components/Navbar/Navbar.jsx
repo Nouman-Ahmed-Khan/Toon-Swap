@@ -6,6 +6,13 @@ import x_icon from '../../assets/x_icon.svg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("Home"); // default active
+
+  const handleNavClick = (linkName) => {
+    setActiveLink(linkName);
+    // optionally close the mobile menu on click
+    setMenuOpen(false);
+  };
 
   return (
     <div className="mx-auto px-4 sm:px-12 sm:mr-3">
@@ -16,15 +23,21 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-45 sm:w-50 cursor-pointer'/>
         </div>
 
-        {/* Desktop Menu */}
+          {/* Desktop Menu */}
         <div className='hidden lg:flex items-center gap-8 xl:mr-45'>
           <ul className='flex nav-links items-center gap-6 px-4 py-1 rounded-xl border-2'>
-            <li className='nav-links active cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl active'>Home</li>
-            <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Toon Pad</li>
-            <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Leaderboard</li>
-            <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Docs</li>
+            {["Home", "Toon Pad", "Leaderboard", "Docs"].map((item) => (
+              <li
+                key={item}
+                onClick={() => handleNavClick(item)}
+                className={`cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl ${
+                  activeLink === item ? "nav-links-bg text-white" : ""
+                }`}
+              >
+                {item}
+              </li>
+            ))}
           </ul>
-          
         </div>
 
           <div className='gap-4 hidden lg:flex'>
