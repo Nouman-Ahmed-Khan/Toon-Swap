@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom'; // Adding react router dom for navigation
 import './Navbar.css';
 import logo from '../../assets/logo.png';
 import telegram_icon from '../../assets/telegram_icon.svg';
@@ -6,13 +7,15 @@ import x_icon from '../../assets/x_icon.svg';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home"); // default active
+  const location = useLocation(); // Using useLocation to get the current path
+  const currentPath = location.pathname;
 
-  const handleNavClick = (linkName) => {
-    setActiveLink(linkName);
-    // optionally close the mobile menu on click
-    setMenuOpen(false);
-  };
+  const navLinks = [
+    { name: "Home", path: "/" },
+    { name: "Toon Pad", path: "/toonpad" },
+    { name: "Leaderboard", path: "/leaderboard" },
+    { name: "Docs", path: "/docs" }
+  ];
 
   return (
     <div className="mx-auto px-4 sm:px-12 sm:mr-3">
@@ -23,36 +26,30 @@ const Navbar = () => {
           <img src={logo} alt="logo" className='w-45 sm:w-50 cursor-pointer'/>
         </div>
 
-          {/* Desktop Menu */}
+        {/* Desktop Menu */}
         <div className='hidden lg:flex items-center gap-8 xl:mr-45'>
-          <ul className='flex nav-links items-center gap-6 px-4 py-1 rounded-xl border-2'>
-            {["Home", "Toon Pad", "Leaderboard", "Docs"].map((item) => (
-              <li
-                key={item}
-                onClick={() => handleNavClick(item)}
-                className={`cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl ${
-                  activeLink === item ? "nav-links-bg text-white" : ""
-                }`}
-              >
-                {item}
+          <ul className='flex nav-links items-center gap-6 px-4 py-1 sm:py-3 rounded-xl border-2'>
+            {navLinks.map((item) => (
+              <li key={item.name}>
+                <Link to={item.path} className={`cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl ${currentPath === item.path ? "nav-links-bg text-white" : ""}`}>{item.name}</Link>
               </li>
             ))}
           </ul>
         </div>
 
-          <div className='gap-4 hidden lg:flex'>
-            <div className="flex gap-2 items-center">
-             <img src={telegram_icon} alt="telegram" className='w-7 sm:w-9 cursor-pointer'/>
-             <img src={x_icon} alt="x" className='w-7 sm:w-9 cursor-pointer' />
-            </div>
-
-            <button className='rounded-xl px-3 py-2 cursor-pointer font-semibold text-sm border-2 connect-wallet-button'>Connect Wallet</button>
+        {/* Social + Button */}
+        <div className='gap-4 hidden lg:flex'>
+          <div className="flex gap-2 items-center">
+            <img src={telegram_icon} alt="telegram" className='w-7 sm:w-9 cursor-pointer'/>
+            <img src={x_icon} alt="x" className='w-7 sm:w-9 cursor-pointer' />
           </div>
+          <button className='rounded-xl px-3 py-2 cursor-pointer font-semibold text-sm border-2 connect-wallet-button'>Connect Wallet</button>
+        </div>
 
         {/* Mobile Burger Icon */}
         <div className='lg:hidden'>
           <button onClick={() => setMenuOpen(!menuOpen)} className="text-white-700 focus:outline-none nav-links p-2 rounded-xl">
-            <svg className="w-6 h-6" fill="none"stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {menuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -67,11 +64,21 @@ const Navbar = () => {
       {menuOpen && (
         <div className='lg:hidden mt-2 navbar shadow-md rounded-xl p-4'>
           <ul className='flex flex-col gap-4 mb-4'>
-            <li className='cursor-pointer font-semibold text-sm'>Home</li>
-            <li className='cursor-pointer font-semibold text-sm'>Toon Pad</li>
-            <li className='cursor-pointer font-semibold text-sm'>Leaderboard</li>
-            <li className='cursor-pointer font-semibold text-sm'>Docs</li>
+            {navLinks.map((item) => (
+              <li key={item.name}>
+                <Link
+                  to={item.path}
+                  onClick={() => setMenuOpen(false)}
+                  className={`cursor-pointer font-semibold text-sm ${
+                    currentPath === item.path ? "nav-links-bg text-white rounded-xl px-3 py-1" : ""
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
+
           <div className="flex gap-2 items-center mb-4">
             <img src={telegram_icon} alt="telegram" className='w-7 cursor-pointer' />
             <img src={x_icon} alt="x" className='w-7 cursor-pointer' />
@@ -84,48 +91,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-
-
-
-// import React from 'react'
-// import './Navbar.css'
-// import logo from '../../assets/logo.png'
-// import telegram_icon from '../../assets/telegram_icon.svg'
-// import x_icon from '../../assets/x_icon.svg'
-
-
-// const Navbar = () => {
-//   return (
-//     <div>
-//       <div className='navbar border-3 flex items-center justify-around py-4 px-0 shadow-md mt-5 mx-20 rounded-2xl'>
-//       <div className='flex items-center justify-between max-w-3xl w-full'>
-//       <div className="nav-logo">
-//         <img src={logo} alt="logo" className='w-50'/>
-//       </div>
-
-//       <div>
-//        <ul className='nav-links flex items-center gap-8 px-2 py-1 rounded-xl border-2'>
-//          <li className='nav-links cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl active'>Home</li>
-//          <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Toon Pad</li>
-//          <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Leaderboard</li>
-//          <li className='cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl'>Docs</li>
-//        </ul>
-//       </div>
-//       </div>
-      
-//       <div className="nav-contact flex gap-4 items-center">
-//          <div className="nav-social-icons flex justify-between items-center gap-2">
-//             <img src={telegram_icon} alt="telegram-logo" className='w-9 cursor-pointer'/>
-//             <img src={x_icon} alt="x-logo" className='w-9 cursor-pointer'/>
-//          </div>
-//          <button type="button" className='connect-wallet-button rounded-xl px-3 py-2 cursor-pointer font-semibold text-sm border-2'>Connect Wallet</button>
-//       </div>
-//         </div>
-
-//      </div>
-//   )
-// }
-
-// export default Navbar
