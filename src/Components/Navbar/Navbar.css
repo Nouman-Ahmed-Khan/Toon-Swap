@@ -4,11 +4,11 @@
     border-color: #1D2425;
 }
 
-.nav-links{
+.nav-links-mainbg{
     background-color: #475355;
     border-color: #2B3335;
 }
-.nav-links :hover{
+.nav-links:hover{
     background-color: #FE7B2A;
     border: 1px solid black;
 }

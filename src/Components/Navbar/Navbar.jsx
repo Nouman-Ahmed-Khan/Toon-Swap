@@ -28,10 +28,10 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className='hidden lg:flex items-center gap-8 xl:mr-45'>
-          <ul className='flex nav-links items-center gap-6 px-4 py-1 sm:py-3 rounded-xl border-2'>
+          <ul className='flex nav-links-mainbg items-center gap-6 px-4 py-1 sm:py-3 rounded-xl border-2'>
             {navLinks.map((item) => (
               <li key={item.name}>
-                <Link to={item.path} className={`cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl ${currentPath === item.path ? "nav-links-bg text-white" : ""}`}>{item.name}</Link>
+                <Link to={item.path} className={`nav-links cursor-pointer font-semibold text-sm px-4 py-2 rounded-xl ${currentPath === item.path ? "nav-links-bg text-white" : ""}`}>{item.name}</Link>
               </li>
             ))}
           </ul>
