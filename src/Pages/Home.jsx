@@ -7,13 +7,44 @@ const Home = () => {
     <div className='mx-auto px-4 sm:px-12 mt-15'>
       <div className='navbar rounded-xl'>
         CAT
-        <div className='my-10 nav-links-mainbg mx-10 border-3 rounded-xl py-3'>
+        <div className='my-10 nav-links-mainbg mx-10 border-3 rounded-xl py-3 flex items-center justify-around'>
           {/* toonswap and other logo start*/}
           <div className='flex'>
             <img src={logo} alt="logo" className='w-25 sm:w-9 cursor-pointer'/>
             <img src={swaplogo} alt="logo" className='w-25 sm:w-9 cursor-pointer'/>
           </div>
           {/* toonswap and other logo end*/}
+          
+          {/* toon supra text start*/}
+          <div className=''>
+            <p className='font-bold text-gray text-lg'>Toon - Supra</p>
+            <p className='text-sm text-gray-300'>Supra Chain</p>
+          </div>
+          {/* toon supra text end*/}
+
+          {/* Fee tire text start*/}
+          <div className=''>
+            <p className='text-sm text-gray-300'>Fee Tire</p>
+            <p className='text-green text-lg'>V2|0.02%</p>            
+          </div>
+          {/* Fee tire text end*/}
+
+          {/* Earned text start*/}
+          <div className=''>
+            <p className='text-sm text-gray-300'>Earned</p>
+            <div className='flex'>
+              <p className='text-gray text-lg'>0.00</p>
+              <p className='text-gray text-sm mt-1 ml-1'>$0.00</p>
+            </div>         
+          </div>
+          {/* Earned text end*/}
+
+          {/* Total Earned APR start*/}
+          <div className=''>
+            <p className='text-sm text-gray-300'>Total Earned APR</p>
+              <p className='text-gray text-lg'>77.08%</p>
+          </div>
+          {/* Total Earned APR end*/}
         </div>
       </div>
     </div>
