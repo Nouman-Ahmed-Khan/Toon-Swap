@@ -1,10 +1,10 @@
 import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import ToonPad from './pages/ToonPad';
-import Leaderboard from './pages/Leaderboard';
-import Docs from './pages/Docs';
+import Home from './Pages/Home';
+import ToonPad from './Pages/ToonPad';
+import Leaderboard from './Pages/Leaderboard';
+import Docs from './Pages/Docs';
 
 function App() {
 
