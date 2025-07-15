@@ -127,45 +127,62 @@ const Home = () => {
 
            {/* Your Positions card Start */}
            <div className='sm:w-[70%] nav-links-mainbg sm:mr-5 sm:p-4 border-3 rounded-xl'>
-             <div>
+             <div className='flex items-center justify-between'>
               <p className='text-2xl text-white font-bold'>Your Positions</p>
               {/* Active inactive buttons star */}
-              <div className='navbar rounded-xl border-3 sm:p-2 sm:mt-4'>
+              <div className='navbar rounded-xl border-3 p-1'>
                
                 {/* supra start */}
                 <div className='flex items-center justify-between'>
-                  <div className='flex items-center justify-center'>
-                    <img src={swaplogo} alt="logo" className='w-25 sm:w-8 cursor-pointer'/>
-                    <p className='font-bold ml-3'>SUPRA</p>
-                  </div>                  
-                  <p>~157.006 TOON</p>
+                  <button className='active nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>All</button>
+                  <button className='nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Active</button>
+                  <button className='nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Inactive</button>
+                  <button className='nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Closed</button>
                 </div>
                 {/* supra end */}
               </div>
               {/* Active inactive buttons end */}
              </div>      
              
-              <div className='text-sm'>
-                  <div className='flex items-center justify-between mt-4 mx-2'>
-                    <p>Liquidity / TVL</p>
-                    <p>$ 94.073 k</p>
-                  </div>
-                  <div className='flex items-center justify-between mt-1 text-gray-300 mx-4'>
-                    <p>TOON Share</p>
-                    <p>$ 64.004 k</p>
-                  </div>
-                  <div className='flex items-center justify-between mt-1 text-gray-300 mx-4'>
-                    <p>SUPRA Share</p>
-                    <p>$ 30.890 k</p>
-                  </div>
-                  <div className='flex items-center justify-between mt-2 text-green mx-2'>
-                    <p>Fee 24h</p>
-                    <p>$ 200.564 k</p>
-                  </div>
+              <div className='text-sm mt-3 navbar rounded-xl border-3 p-3'>
+                <table class="table-auto text-center w-full">
+                   <thead>
+                     <tr className='text-gray-300 border-b-2 border-gray-600'>
+                      <th className='pb-1'>Position ID</th>
+                      <th>Date & Time</th>
+                      <th>Value</th>
+                      <th>Status</th>
+                     </tr>
+                    </thead>
+                  <tbody>
+                   <tr className='border-b border-gray-600'>
+                     <td className='py-1'>#45324</td>
+                     <td>14 - 06 - 2024 14 : 06</td>
+                     <td>$ 6700.707 M</td>
+                     <td><button className='bg-green-400 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Active</button></td>
+                   </tr>
+                   <tr className='border-b border-gray-600'>
+                     <td className='py-1'>#45324</td>
+                     <td>14 - 06 - 2024 14 : 06</td>
+                     <td>$ 6700.707 M</td>
+                     <td><button className='bg-gray-500 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Inactive</button></td>
+                   </tr>
+                   <tr className='border-b border-gray-600'>
+                     <td className='py-1'>#45324</td>
+                     <td>14 - 06 - 2024 14 : 06</td>
+                     <td>$ 6700.707 M</td>
+                     <td><button className='bg-yellow-300 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Pending</button></td>
+                   </tr>
+                   <tr className='border-b border-gray-600'>
+                     <td className='py-1'>#45324</td>
+                     <td>14 - 06 - 2024 14 : 06</td>
+                     <td>$ 6700.707 M</td>
+                     <td><button className='bg-red-500 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Closed</button></td>
+                   </tr>
+                   
+                 </tbody>
+                </table>
               </div>
-
-              <button className='mt-4 w-full rounded-xl px-3 py-2 cursor-pointer font-semibold text-sm border-2 connect-wallet-button'>Add Liquidity</button>
-
            </div>
            {/* Your Positions card End */}
          </div>
