@@ -4,8 +4,8 @@ import swaplogo from '../assets/swaplogo.png'
 
 const Home = () => {
   return (
-    <div className='mx-auto sm:ml-1 sm:mr-3 px-4 sm:px-12 mt-10'>
-      <div className='navbar rounded-xl border-3'>
+    <div className='mx-auto sm:ml-1 sm:mr-3 px-4 sm:px-15 mt-10'>
+      <div className='navbar rounded-xl border-3 sm:px-1'>
         
         <div className='my-5 nav-links-mainbg sm:mx-5 border-3 rounded-xl py-2 flex items-center justify-around'>
           {/* toonswap and other logo start*/}
@@ -74,7 +74,7 @@ const Home = () => {
         {/* Home Page Section-1 Start */}
          <div className='flex flex-col sm:flex-row items-center sm:my-4'>
            {/* Pair info card Start */}
-           <div className='sm:w-[30%] nav-links-mainbg sm:mx-5 sm:p-4 border-3 rounded-xl'>
+           <div className='sm:w-[40%] nav-links-mainbg sm:mx-5 sm:py-4 sm:px-7 border-3 rounded-xl'>
              <p className='text-2xl text-white font-bold'>Pair Info</p>
 
              {/* Toon and Supra section Start */}
@@ -126,7 +126,7 @@ const Home = () => {
            {/* Pair info card End */}
 
            {/* Your Positions card Start */}
-           <div className='sm:w-[70%] nav-links-mainbg sm:mr-5 sm:p-4 border-3 rounded-xl'>
+           <div className='sm:w-[60%] nav-links-mainbg sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
              <div className='flex items-center justify-between'>
               <p className='text-2xl text-white font-bold'>Your Positions</p>
               {/* Active inactive buttons star */}
@@ -144,7 +144,7 @@ const Home = () => {
               {/* Active inactive buttons end */}
              </div>      
              
-              <div className='text-sm mt-3 navbar rounded-xl border-3 p-3'>
+              <div className='text-sm navbar rounded-xl border-3 sm:mt-3 sm:mb-2 sm:p-3'>
                 <table class="table-auto text-center w-full">
                    <thead>
                      <tr className='text-gray-300 border-b-2 border-gray-600'>
@@ -178,6 +178,12 @@ const Home = () => {
                      <td>14 - 06 - 2024 14 : 06</td>
                      <td>$ 6700.707 M</td>
                      <td><button className='bg-red-500 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Closed</button></td>
+                   </tr>
+
+                   {/* <!-- Empty Row --> */} 
+                   <tr className=''> 
+                      <td className='py-4' colspan="4">
+                      </td>
                    </tr>
                    
                  </tbody>
