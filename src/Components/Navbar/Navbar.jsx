@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="mx-auto px-4 sm:px-15 sm:mr-3">
+    <div className="mx-auto p-2 sm:px-15 sm:mr-3">
       <div className='navbar flex items-center justify-around py-4 px-4 mt-5 rounded-2xl border-3'>
 
         {/* Logo */}

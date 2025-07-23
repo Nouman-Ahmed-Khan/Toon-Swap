@@ -4,26 +4,27 @@ import swaplogo from '../assets/swaplogo.png'
 
 const Home = () => {
   return (
-    <div className='mx-auto sm:ml-1 sm:mr-3 px-4 sm:px-15 mt-10'>
+    <div className='mx-auto sm:ml-1 sm:mr-3 p-2 sm:px-15 mt-5 sm:mt-10'>
       <div className='navbar rounded-xl border-3 sm:px-1'>
         
-        <div className='my-5 nav-links-mainbg sm:mx-5 border-3 rounded-xl py-2 flex items-center justify-around'>
+        <div className='m-4 px-5 sm:px-0 sm:my-5 nav-links-mainbg sm:mx-5 border-3 rounded-xl py-2 sm:flex items-center justify-around'>
           {/* toonswap and other logo start*/}
-          <div className='flex items-center'>
-            <img src={logo} alt="logo" className='w-25 sm:w-9 cursor-pointer'/>
-            <img src={swaplogo} alt="logo" className='w-25 sm:w-9 cursor-pointer'/>
+          <div className='w-full sm:w-auto mx-4 mb-5 sm:mb-0 sm:mx-0 flex items-center'>
+            <img src={logo} alt="logo" className='sm:w-9 w-auto cursor-pointer'/>
+            <img src={swaplogo} alt="logo" className='sm:w-9 w-auto cursor-pointer'/>
 
             {/* toon supra text start*/}
           <div className='ml-5'>
-            <p className='font-bold text-md'>TOON - SUPRA</p>
-            <p className='text-sm text-gray-300'>Supra Chain</p>
+            <p className='font-bold text-xl sm:text-md'>TOON - SUPRA</p>
+            <p className='text-md sm:text-sm text-gray-300'>Supra Chain</p>
           </div>
           {/* toon supra text end*/}
           </div>
           {/* toonswap and other logo end*/}
           
-          
 
+          {/*👇🏼 this div is only for mobile responsive */}
+          <div className='flex sm:flex-none sm:w-[30%] justify-between items-center mb-4 sm:mb-0'>
           {/* Fee tire text start*/}
           <div className=''>
             <p className='text-sm text-gray-300'>Fee Tire</p>
@@ -40,14 +41,18 @@ const Home = () => {
             </div>         
           </div>
           {/* Earned text end*/}
-
+          
           {/* Total Earned APR start*/}
           <div className=''>
             <p className='text-sm text-gray-300'>Total Earned APR</p>
               <p className='text-gray text-lg'>77.08%</p>
           </div>
           {/* Total Earned APR end*/}
+          </div>
+          {/*👆🏼 this div is only for mobile responsive */}
 
+          {/*👇🏼 this div is only for mobile responsive */}
+          <div className='flex sm:flex-none sm:w-[30%] justify-between items-center'>
           {/* Liquidity start*/}
           <div className=''>
             <p className='text-sm text-gray-300'>Liquidity</p>
@@ -65,24 +70,26 @@ const Home = () => {
           {/* Pool Type start*/}
           <div className=''>
             <p className='text-sm text-gray-300'>Pool Type</p>
-              <p className='text-green text-lg'>V2</p>
+            <p className='text-green text-lg'>V2</p>
           </div>
           {/* Pool Type end*/}
+          </div>
+          {/*👆🏼 this div is only for mobile responsive */}
         </div>
 
 
         {/* Home Page Section-1 Start */}
          <div className='flex flex-col sm:flex-row items-center sm:my-4'>
            {/* Pair info card Start */}
-           <div className='sm:w-[40%] nav-links-mainbg sm:mx-5 sm:py-4 sm:px-7 border-3 rounded-xl'>
+           <div className='sm:w-[40%] nav-links-mainbg px-5 py-3 sm:mx-5 sm:py-4 sm:px-7 border-3 rounded-xl'>
              <p className='text-2xl text-white font-bold'>Pair Info</p>
 
              {/* Toon and Supra section Start */}
-              <div className='navbar rounded-xl border-3 sm:p-4 sm:mt-4'>
+              <div className='navbar rounded-xl border-3 p-4 mt-3 sm:p-4 sm:mt-4'>
                 {/* toon start */}
                 <div className='flex items-center justify-between'>
-                  <div className='flex items-center justify-center'>
-                    <img src={logo} alt="logo" className='w-25 sm:w-8 cursor-pointer'/>
+                  <div className='flex items-center justify-center mr-7 sm:mr-0'>
+                    <img src={logo} alt="logo" className='w-auto sm:w-8 cursor-pointer'/>
                     <p className='font-bold ml-3'>TOON</p>
                   </div>                  
                   <p>~157.006 SUPRA</p>
@@ -92,7 +99,7 @@ const Home = () => {
                 {/* supra start */}
                 <div className='flex items-center justify-between mt-2'>
                   <div className='flex items-center justify-center'>
-                    <img src={swaplogo} alt="logo" className='w-25 sm:w-8 cursor-pointer'/>
+                    <img src={swaplogo} alt="logo" className='w-auto sm:w-8 cursor-pointer'/>
                     <p className='font-bold ml-3'>SUPRA</p>
                   </div>                  
                   <p>~157.006 TOON</p>
@@ -126,11 +133,11 @@ const Home = () => {
            {/* Pair info card End */}
 
            {/* Your Positions card Start */}
-           <div className='sm:w-[60%] nav-links-mainbg sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
-             <div className='flex items-center justify-between'>
+           <div className='sm:w-[60%] nav-links-mainbg sm:mx-0 mx-4 mt-4 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
+             <div className='sm:flex items-center justify-between'>
               <p className='text-2xl text-white font-bold'>Your Positions</p>
               {/* Active inactive buttons star */}
-              <div className='navbar rounded-xl border-3 p-1'>
+              <div className='navbar rounded-xl border-3 p-1 my-3 sm:my-0'>
                
                 {/* supra start */}
                 <div className='flex items-center justify-between'>
@@ -144,7 +151,7 @@ const Home = () => {
               {/* Active inactive buttons end */}
              </div>      
              
-              <div className='text-sm navbar rounded-xl border-3 sm:mt-3 sm:mb-2 sm:p-3'>
+              <div className='text-sm navbar p-2 rounded-xl border-3 sm:mt-3 sm:mb-2 sm:p-3'>
                 <table class="table-auto text-center w-full">
                    <thead>
                      <tr className='text-gray-300 border-b-2 border-gray-600'>
