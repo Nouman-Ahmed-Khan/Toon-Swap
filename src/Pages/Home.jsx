@@ -81,7 +81,7 @@ const Home = () => {
         {/* Home Page Section-1 Start */}
          <div className='flex flex-col sm:flex-row items-center sm:my-4'>
            {/* Pair info card Start */}
-           <div className='sm:w-[40%] nav-links-mainbg px-5 py-3 sm:mx-5 sm:py-4 sm:px-7 border-3 rounded-xl'>
+           <div className='sm:w-[40%] nav-links-mainbg px-6 py-3 sm:mx-5 sm:py-4 sm:px-7 border-3 rounded-xl'>
              <p className='text-2xl text-white font-bold'>Pair Info</p>
 
              {/* Toon and Supra section Start */}
@@ -151,40 +151,40 @@ const Home = () => {
               {/* Active inactive buttons end */}
              </div>      
              
-              <div className='text-sm navbar p-2 rounded-xl border-3 sm:mt-3 sm:mb-2 sm:p-3'>
-                <table class="table-auto text-center w-full">
+              <div className='w-full overflow-x-auto sm:text-sm text-xs navbar p-2 rounded-xl border-3 sm:mt-3 sm:mb-2 sm:p-3'>
+                <table className="table-auto text-center  sm:w-full overflow-x-auto">
                    <thead>
                      <tr className='text-gray-300 border-b-2 border-gray-600'>
                       <th className='pb-1'>Position ID</th>
-                      <th>Date & Time</th>
-                      <th>Value</th>
-                      <th>Status</th>
+                      <th className='sm:px-0 px-3 pb-1 '>Date & Time</th>
+                      <th className='pb-1'>Value</th>
+                      <th className='pb-1 sm:px-0 px-3'>Status</th>
                      </tr>
                     </thead>
                   <tbody>
                    <tr className='border-b border-gray-600'>
                      <td className='py-1'>#45324</td>
-                     <td>14 - 06 - 2024 14 : 06</td>
-                     <td>$ 6700.707 M</td>
-                     <td><button className='bg-green-400 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Active</button></td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
+                     <td className=''>$ 6700.707 M</td>
+                     <td><button className='bg-green-400 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Active</button></td>
                    </tr>
                    <tr className='border-b border-gray-600'>
                      <td className='py-1'>#45324</td>
-                     <td>14 - 06 - 2024 14 : 06</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
                      <td>$ 6700.707 M</td>
-                     <td><button className='bg-gray-500 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Inactive</button></td>
+                     <td><button className='bg-gray-500 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Inactive</button></td>
                    </tr>
                    <tr className='border-b border-gray-600'>
                      <td className='py-1'>#45324</td>
-                     <td>14 - 06 - 2024 14 : 06</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
                      <td>$ 6700.707 M</td>
-                     <td><button className='bg-yellow-300 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Pending</button></td>
+                     <td><button className='bg-yellow-300 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Pending</button></td>
                    </tr>
                    <tr className='border-b border-gray-600'>
                      <td className='py-1'>#45324</td>
-                     <td>14 - 06 - 2024 14 : 06</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
                      <td>$ 6700.707 M</td>
-                     <td><button className='bg-red-500 my-2 cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Closed</button></td>
+                     <td><button className='bg-red-500 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Closed</button></td>
                    </tr>
 
                    {/* <!-- Empty Row --> */} 
