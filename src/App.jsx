@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import ToonPad from './Pages/ToonPad';
 import Leaderboard from './Pages/Leaderboard';
 import Docs from './Pages/Docs';
+import VolumeChart from './Pages/volumechart';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/ToonPad" element={<ToonPad />} />
         <Route path="/Leaderboard" element={<Leaderboard />} />
         <Route path="/Docs" element={<Docs />} />
+        <Route path="/VolumeChart" element={<VolumeChart />} />
       </Routes>
      </BrowserRouter>
 
