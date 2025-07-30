@@ -75,7 +75,7 @@ const VolumeChart = () => {
   };
 
   return (
-    <div className="bg-[#374244] text-white p-6 rounded-xl max-w-3xl mx-auto">
+    <div className="text-white p-6 rounded-xl max-w-3xl mx-auto">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Volume</h2>
         <div className="text-right">
