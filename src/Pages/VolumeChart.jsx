@@ -28,8 +28,12 @@ const VolumeChart = () => {
   ];
 
   const volumeData = [
-    390, 440, 430, 420, 410, 400, 390, 380, 420, 430, 390, 430, 390, 400, 410, 420, 430, 440, 430, 420
+    400, 405, 410, 430, 420, 420, 410, 405, 403, 402, 401, 410, 413, 416, 420, 420, 425, 430, 430, 420
   ];
+
+  
+// Raise the line 10 units higher
+const lineData = volumeData.map(v => v + 5);
 
   const totalVolume = volumeData.reduce((acc, val) => acc + val, 0).toFixed(3);
 
@@ -47,10 +51,10 @@ const VolumeChart = () => {
       {
         type: 'line',
         label: 'Line Volume',
-        data: volumeData,
+        data: lineData,
         borderColor: '#9DFFB0',
         backgroundColor: '#9DFFB0',
-        tension: 0.6,
+        tension: 0.1,
         pointRadius: 3,
         pointBackgroundColor: '#9DFFB0',
       },
@@ -63,6 +67,7 @@ const VolumeChart = () => {
     plugins: {
       legend: { display: false },
     },
+
     scales: {
       x: {
         grid: { display: false },
@@ -87,7 +92,7 @@ const VolumeChart = () => {
   };
 
   return (
-    <div className="text-white p-6 rounded-xl max-w-3xl mx-auto">
+    <div className="text-white p-2 rounded-xl max-w-3xl mx-auto">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Volume</h2>
         <div className="text-right">
