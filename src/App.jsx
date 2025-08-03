@@ -5,7 +5,8 @@ import Home from './Pages/Home';
 import ToonPad from './Pages/ToonPad';
 import Leaderboard from './Pages/Leaderboard';
 import Docs from './Pages/Docs';
-import VolumeChart from './Pages/volumechart';
+import VolumeChart from './Pages/VolumeChart';
+import BTCChart from './Pages/BTCChart';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Leaderboard" element={<Leaderboard />} />
         <Route path="/Docs" element={<Docs />} />
         <Route path="/VolumeChart" element={<VolumeChart />} />
+        <Route path="/BTCChart" element={<BTCChart />} />
       </Routes>
      </BrowserRouter>
 
