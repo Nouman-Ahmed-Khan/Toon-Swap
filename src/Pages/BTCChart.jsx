@@ -68,7 +68,7 @@ const BTCGradientChart = () => {
           if (!chartArea) return null;
           const gradient = ctx.createLinearGradient(0, chartArea.top, 0, chartArea.bottom);
           gradient.addColorStop(0, 'rgba(255, 128, 0, 1)'); // orange
-          gradient.addColorStop(1, 'rgba(255, 0, 0, 0.9)'); // red
+          gradient.addColorStop(1, '#FE7B2A'); // red
           return gradient;
         },
         tension: 0.4,
