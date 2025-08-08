@@ -100,7 +100,7 @@ const lineData = volumeData.map(v => v + 5);
           <p className="text-sm text-gray-300">Dec-20–2023 , 9:12 AM (UTC)</p>
         </div>
       </div>
-      <div className="navbar p-4 rounded-xl border-3 h-64 overflow-x-auto">
+      <div className="navbar sm:p-4 p-2 rounded-xl border-3 h-64 overflow-x-auto">
         <Chart type="bar" data={data} options={options} />
       </div>
     </div>
