@@ -206,15 +206,15 @@ const Home = () => {
 
 
         {/* Home Page Section-2 Start */}
-         <div className='flex flex-col sm:flex-row items-center sm:my-4'>
+         <div className='flex flex-col mx-4 sm:mx-0 sm:flex-row items-center sm:my-4'>
            {/* Volume card Start */}
-           <div className='sm:w-[50%] w-auto nav-links-mainbg sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl sm:ml-5'>
+           <div className='sm:w-[50%] w-full nav-links-mainbg mx-4 sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl sm:ml-5'>
               <VolumeChart/>
            </div>
            {/* Volume card End */}
 
            {/* Lquidity card Start */}
-           <div className='sm:w-[50%] w-auto nav-links-mainbg sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
+           <div className='sm:w-[50%] w-full nav-links-mainbg sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
               <BTCChart/>
            </div>
            {/* Liquidity card End */}

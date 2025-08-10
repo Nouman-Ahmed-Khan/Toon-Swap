@@ -92,8 +92,8 @@ const lineData = volumeData.map(v => v + 5);
   };
 
   return (
-    <div className="text-white rounded-xl max-w-3xl mx-auto">
-      <div className="sm:flex sm:justify-between items-center mb-4">
+    <div className="text-white rounded-xl max-w-3xl">
+      <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Volume</h2>
         <div className="text-right">
           <p className="text-2xl font-bold text-white">$ {totalVolume} M</p>
