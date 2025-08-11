@@ -7,6 +7,7 @@ import Leaderboard from './Pages/Leaderboard';
 import Docs from './Pages/Docs';
 import VolumeChart from './Pages/VolumeChart';
 import BTCChart from './Pages/BTCChart';
+import Transactions from './Pages/Transactions';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Docs" element={<Docs />} />
         <Route path="/VolumeChart" element={<VolumeChart />} />
         <Route path="/BTCChart" element={<BTCChart />} />
+        <Route path="/Transactions" element={<Transactions />} />
       </Routes>
      </BrowserRouter>
 

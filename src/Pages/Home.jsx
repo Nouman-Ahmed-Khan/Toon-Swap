@@ -3,6 +3,7 @@ import logo from '../assets/circlelogo.png'
 import swaplogo from '../assets/swaplogo.png'
 import VolumeChart from './VolumeChart.jsx';
 import BTCChart from './BTCChart.jsx';
+import Transactions from './Transactions.jsx';
 
 
 const Home = () => {
@@ -221,8 +222,12 @@ const Home = () => {
          </div>
         {/* Home Page Section-2 End */}
 
-
-      </div>    
+        {/* Home Page Section-3 Start */}
+         <div className='w-full sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-5 sm:py-4'>
+            <Transactions/>
+          </div>
+        {/* Home Page Section-3 End */}
+      </div>
     </div>
   )
 }
