@@ -1,4 +1,8 @@
 import React from 'react';
+import { FaLessThan } from "react-icons/fa";
+import { FaGreaterThan } from "react-icons/fa";
+import { VscGraph } from "react-icons/vsc";
+
 
 const Transactions = () => {
   return (
@@ -8,15 +12,15 @@ const Transactions = () => {
              <div className='sm:flex items-center justify-between'>
               <p className='text-2xl text-white font-bold'>Transacations</p>
 
+              <div className='flex items-center'>
               {/* Page Changer Start */}
                 {/* supra start */}
-                <div className='navbar rounded-xl border-3 p-1 my-3 sm:my-0'>
+                <div className='navbar rounded-xl border-3 p-1 my-3 sm:my-0 mr-6'>
                 
                  <div className='flex items-center justify-between'>
-                    <button className='active nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'></button>
-                    <button className='nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Swap</button>
-                    <button className='nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Add</button>
-                    <button className='nav-links cursor-pointer font-semibold text-sm px-4 py-1 rounded-lg'>Remove</button>
+                    <button className='active nav-links cursor-pointer text-xs p-1.25 rounded-full'><FaLessThan /></button>
+                    <p className='text-sm mx-3'>Page 1 of 5</p>
+                    <button className='active nav-links cursor-pointer text-xs p-1.25 rounded-full'><FaGreaterThan /></button>
                   </div>               
                 </div>
                 {/* supra end */}
@@ -35,43 +39,69 @@ const Transactions = () => {
                 {/* supra end */}
               </div>
               {/* Active inactive buttons end */}
+              </div>
              </div>      
              
               <div className='w-full overflow-x-auto sm:text-sm text-xs navbar p-2 rounded-xl border-3 sm:mt-3 sm:mb-2 sm:p-3'>
                 <table className="table-auto text-center sm:w-full overflow-x-auto">
                    <thead>
                      <tr className='text-gray-300 border-b-2 border-gray-600'>
-                      <th className='pb-1'>Position ID</th>
-                      <th className='sm:px-0 px-3 pb-1 '>Date & Time</th>
-                      <th className='pb-1'>Value</th>
-                      <th className='pb-1 sm:px-0 px-3'>Status</th>
+                      <th className='pb-1'>#</th>
+                      <th className='sm:px-0 px-3 pb-1 '>Transactions</th>
+                      <th className='pb-1'>Total Value</th>
+                      <th className='pb-1 sm:px-0 px-3'>Token 1</th>
+                      <th className='pb-1 sm:px-0 px-3'>Token 2</th>
+                      <th className='pb-1 sm:px-0 px-3'>Account</th>
+                      <th className='pb-1 sm:px-0 px-3'>Time & Date</th>
                      </tr>
                     </thead>
                   <tbody>
                    <tr className='border-b border-gray-600'>
-                     <td className='py-1'>#45324</td>
-                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
-                     <td className=''>$ 6700.707 M</td>
-                     <td><button className='bg-green-400 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Active</button></td>
+                     <td className='py-1'>#1</td>
+                     <td className='pt-3 flex gap-2 justify-center items-center'>TOON → SUPRA<VscGraph /></td>
+                     <td className=''>$ 200.807 k</td>
+                     <td className=''>200 <span className='text-gray-400'>TOON</span></td>
+                     <td className=''>300.67 <span className='text-gray-400'>SUPRA</span></td>
+                     <td className='text-blue-300'>0x905...1c2Af</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 <span className='ml-2'>14 : 06</span></td>
                    </tr>
                    <tr className='border-b border-gray-600'>
-                     <td className='py-1'>#45324</td>
-                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
-                     <td>$ 6700.707 M</td>
-                     <td><button className='bg-gray-500 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Inactive</button></td>
+                     <td className='py-1'>#2</td>
+                     <td className='pt-3 flex gap-2 justify-center items-center'>TOON → SUPRA<VscGraph /></td>
+                     <td className=''>$ 200.807 k</td>
+                     <td className=''>200 <span className='text-gray-400'>TOON</span></td>
+                     <td className=''>300.67 <span className='text-gray-400'>SUPRA</span></td>
+                     <td className='text-blue-300'>0x905...1c2Af</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 <span className='ml-2'>14 : 06</span></td>
                    </tr>
                    <tr className='border-b border-gray-600'>
-                     <td className='py-1'>#45324</td>
-                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
-                     <td>$ 6700.707 M</td>
-                     <td><button className='bg-yellow-300 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Pending</button></td>
+                     <td className='py-1'>#3</td>
+                     <td className='pt-3 flex gap-2 justify-center items-center'>TOON → SUPRA<VscGraph /></td>
+                     <td className=''>$ 200.807 k</td>
+                     <td className=''>200 <span className='text-gray-400'>TOON</span></td>
+                     <td className=''>300.67 <span className='text-gray-400'>SUPRA</span></td>
+                     <td className='text-blue-300'>0x905...1c2Af</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 <span className='ml-2'>14 : 06</span></td>
                    </tr>
                    <tr className='border-b border-gray-600'>
-                     <td className='py-1'>#45324</td>
-                     <td className='px-3 sm:px-0'>14 - 06 - 2024 14 : 06</td>
-                     <td>$ 6700.707 M</td>
-                     <td><button className='bg-red-500 my-2 cursor-pointer font-semibold sm:text-sm text-xs sm:px-4 px-2 ml-3 sm:ml-0 py-1 rounded-lg'>Closed</button></td>
+                     <td className='py-1'>#4</td>
+                     <td className='pt-3 flex gap-2 justify-center items-center'>TOON → SUPRA<VscGraph /></td>
+                     <td className=''>$ 200.807 k</td>
+                     <td className=''>200 <span className='text-gray-400'>TOON</span></td>
+                     <td className=''>300.67 <span className='text-gray-400'>SUPRA</span></td>
+                     <td className='text-blue-300'>0x905...1c2Af</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 <span className='ml-2'>14 : 06</span></td>
                    </tr>
+                   <tr className='border-b border-gray-600'>
+                     <td className='py-1'>#5</td>
+                     <td className='pt-3 flex gap-2 justify-center items-center'>TOON → SUPRA<VscGraph /></td>
+                     <td className=''>$ 200.807 k</td>
+                     <td className=''>200 <span className='text-gray-400'>TOON</span></td>
+                     <td className=''>300.67 <span className='text-gray-400'>SUPRA</span></td>
+                     <td className='text-blue-300'>0x905...1c2Af</td>
+                     <td className='px-3 sm:px-0'>14 - 06 - 2024 <span className='ml-2'>14 : 06</span></td>
+                   </tr>
+                   
 
                    {/* <!-- Empty Row --> */} 
                    <tr className=''> 
