@@ -11,9 +11,9 @@ const Home = () => {
     <div className='mx-auto sm:ml-1 sm:mr-3 p-2 sm:px-15 mt-5 sm:mt-10'>
       <div className='navbar rounded-xl border-3 sm:px-1'>
         
-        <div className='m-4 px-5 sm:px-0 sm:my-5 nav-links-mainbg sm:mx-5 border-3 rounded-xl py-2 sm:flex items-center justify-around'>
+        <div className='m-4 px-5 sm:px-0 sm:my-5 nav-links-mainbg sm:mx-5 border-3 rounded-xl py-2 lg:flex items-center justify-around'>
           {/* toonswap and other logo start*/}
-          <div className='w-full sm:w-auto mx-4 mb-5 sm:mb-0 sm:mx-0 flex items-center'>
+          <div className='w-full sm:w-auto mx-4 mb-5 sm:mb-0 lg:mx-0 flex items-center'>
             <img src={logo} alt="logo" className='sm:w-9 w-auto cursor-pointer'/>
             <img src={swaplogo} alt="logo" className='sm:w-9 w-auto cursor-pointer'/>
 
@@ -28,7 +28,7 @@ const Home = () => {
           
 
           {/*👇🏼 this div is only for mobile responsive */}
-          <div className='flex sm:flex-none sm:w-[30%] justify-between items-center mb-4 sm:mb-0'>
+          <div className='flex sm:flex-none sm:w-full sm:justify-around lg:w-[30%] justify-between items-center mb-4 sm:mb-0'>
           {/* Fee tire text start*/}
           <div className=''>
             <p className='text-sm text-gray-300'>Fee Tire</p>
@@ -56,7 +56,7 @@ const Home = () => {
           {/*👆🏼 this div is only for mobile responsive */}
 
           {/*👇🏼 this div is only for mobile responsive */}
-          <div className='flex sm:flex-none sm:w-[30%] justify-between items-center'>
+          <div className='flex sm:flex-none sm:w-full sm:justify-around lg:w-[30%] justify-between items-center'>
           {/* Liquidity start*/}
           <div className=''>
             <p className='text-sm text-gray-300'>Liquidity</p>
@@ -91,7 +91,7 @@ const Home = () => {
              {/* Toon and Supra section Start */}
               <div className='navbar rounded-xl border-3 p-4 mt-3 sm:p-4 sm:mt-4'>
                 {/* toon start */}
-                <div className='flex items-center justify-between'>
+                <div className='flex sm:flex-none lg:flex items-center justify-between'>
                   <div className='flex items-center justify-center mr-7 sm:mr-0'>
                     <img src={logo} alt="logo" className='w-auto sm:w-8 cursor-pointer'/>
                     <p className='font-bold ml-3'>TOON</p>
@@ -101,7 +101,7 @@ const Home = () => {
                 {/* toon end */}
 
                 {/* supra start */}
-                <div className='flex items-center justify-between mt-2'>
+                <div className='flex sm:flex-none lg:flex items-center justify-between mt-2'>
                   <div className='flex items-center justify-center'>
                     <img src={swaplogo} alt="logo" className='w-auto sm:w-8 cursor-pointer'/>
                     <p className='font-bold ml-3'>SUPRA</p>
@@ -138,7 +138,7 @@ const Home = () => {
 
            {/* Your Positions card Start */}
            <div className='sm:w-[60%] nav-links-mainbg sm:mx-0 mx-4 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
-             <div className='sm:flex items-center justify-between'>
+             <div className='lg:flex items-center justify-between'>
               <p className='text-2xl text-white font-bold'>Your Positions</p>
               {/* Active inactive buttons star */}
               <div className='navbar rounded-xl border-3 p-1 my-3 sm:my-0'>
@@ -209,13 +209,13 @@ const Home = () => {
         {/* Home Page Section-2 Start */}
          <div className='flex flex-col mx-4 sm:mx-0 sm:flex-row items-center sm:my-4'>
            {/* Volume card Start */}
-           <div className='sm:w-[50%] w-full nav-links-mainbg mx-4 sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl sm:ml-5'>
+           <div className='sm:w-[45%] lg:w-[50%] w-full nav-links-mainbg mx-4 sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl sm:ml-5'>
               <VolumeChart/>
            </div>
            {/* Volume card End */}
 
            {/* Lquidity card Start */}
-           <div className='sm:w-[50%] w-full nav-links-mainbg sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
+           <div className='sm:w-[45%] lg:w-[50%] w-full nav-links-mainbg sm:mx-0 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
               <BTCChart/>
            </div>
            {/* Liquidity card End */}

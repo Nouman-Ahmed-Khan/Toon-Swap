@@ -110,9 +110,9 @@ const BTCGradientChart = () => {
 
   return (
     <div className="text-white rounded-xl max-w-3xl mx-auto">
-      <div className="flex justify-between items-center mb-4">
+      <div className="lg:flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">BTC / USDT</h2>
-        <div className="text-right">
+        <div className="lg:text-right">
           <p className="text-2xl font-bold text-white">
             {currentPrice ? `$ ${currentPrice.toLocaleString()}` : 'Loading...'}
           </p>

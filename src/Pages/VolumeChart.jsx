@@ -93,9 +93,9 @@ const lineData = volumeData.map(v => v + 5);
 
   return (
     <div className="text-white rounded-xl max-w-3xl">
-      <div className="flex justify-between items-center mb-4">
+      <div className="lg:flex justify-between items-center mb-4">
         <h2 className="text-2xl font-bold">Volume</h2>
-        <div className="text-right">
+        <div className="lg:text-right">
           <p className="text-2xl font-bold text-white">$ {totalVolume} M</p>
           <p className="text-sm text-gray-300">Dec-20–2023 , 9:12 AM (UTC)</p>
         </div>
