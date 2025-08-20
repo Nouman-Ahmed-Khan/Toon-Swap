@@ -6,8 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Toon Swap</title>
   </head>
-  <body class="bg-image">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body>
+     <div id="root"></div>
+  <!-- Change this line: -->
+  <script type="module" src="/src/main.jsx"></script>
+  <!-- To either: -->
+  <script type="module" src="./src/main.jsx"></script>
+  <!-- Or better for Vite production: -->
+  <script type="module" src="/assets/index-[hash].js"></script>
+  <!-- Vite will auto-replace this during build -->
   </body>
 </html>

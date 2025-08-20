@@ -1,10 +1,19 @@
+// In main.jsx
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+try {
+  createRoot(document.getElementById('root')).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  )
+} catch (error) {
+  console.error('Failed to mount React:', error)
+  document.getElementById('root').innerHTML = `
+    <h1 style="color:red">App Failed to Load</h1>
+    <p>${error.message}</p>
+  `
+}
