@@ -137,7 +137,7 @@ const Home = () => {
            {/* Pair info card End */}
 
            {/* Your Positions card Start */}
-           <div className='sm:w-[60%] nav-links-mainbg sm:mx-0 py-2 px-2 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
+           <div className='sm:w-[60%] nav-links-mainbg sm:mx-0 mx-4 py-2 px-2 mt-4 sm:mt-1 p-4 sm:mr-5 sm:px-7 sm:py-4 border-3 rounded-xl'>
              <div className='lg:flex items-center justify-between'>
               <p className='text-2xl text-white font-bold'>Your Positions</p>
               {/* Active inactive buttons star */}
