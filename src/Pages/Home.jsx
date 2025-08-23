@@ -85,7 +85,7 @@ const Home = () => {
         {/* Home Page Section-1 Start */}
          <div className='flex flex-col sm:flex-row items-center sm:my-4'>
            {/* Pair info card Start */}
-           <div className='sm:w-[40%] nav-links-mainbg px-6 py-3 sm:mx-5 sm:py-4 sm:px-7 border-3 rounded-xl'>
+           <div className='sm:w-[40%] mx-4 nav-links-mainbg px-6 py-3 sm:mx-5 sm:py-4 sm:px-7 border-3 rounded-xl'>
              <p className='text-2xl text-white font-bold'>Pair Info</p>
 
              {/* Toon and Supra section Start */}
