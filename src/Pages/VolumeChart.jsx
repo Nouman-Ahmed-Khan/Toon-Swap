@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -9,6 +10,7 @@ import {
   Legend,
   Tooltip,
 } from 'chart.js';
+
 import { Chart } from 'react-chartjs-2';
 
 ChartJS.register(
@@ -31,9 +33,8 @@ const VolumeChart = () => {
     400, 405, 410, 430, 420, 420, 410, 405, 403, 402, 401, 410, 413, 416, 420, 420, 425, 430, 430, 420
   ];
 
-  
-// Raise the line 10 units higher
-const lineData = volumeData.map(v => v + 5);
+  // Raise the line 10 units higher
+  const lineData = volumeData.map(v => v + 5);
 
   const totalVolume = volumeData.reduce((acc, val) => acc + val, 0).toFixed(3);
 
