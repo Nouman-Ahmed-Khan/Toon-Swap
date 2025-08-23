@@ -1,7 +1,7 @@
 .bg-image{
     margin: 0;
     padding: 0;
-    background-image: url('./assets/background.png'); /* Make sure this image is in the /public folder */
+    background-image: url('/background.png'); /* Make sure this image is in the /public folder */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
