@@ -13,6 +13,7 @@ import {
 
 import { Chart } from 'react-chartjs-2';
 
+// All chart controllers and elements MUST be registered here.
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -33,7 +34,6 @@ const VolumeChart = () => {
     400, 405, 410, 430, 420, 420, 410, 405, 403, 402, 401, 410, 413, 416, 420, 420, 425, 430, 430, 420
   ];
 
-  // Raise the line 10 units higher
   const lineData = volumeData.map(v => v + 5);
 
   const totalVolume = volumeData.reduce((acc, val) => acc + val, 0).toFixed(3);
@@ -47,7 +47,7 @@ const VolumeChart = () => {
         data: volumeData,
         backgroundColor: '#00E6B8',
         borderRadius: 4,
-        barThickness: 9, // 👈 narrower bars
+        barThickness: 9,
       },
       {
         type: 'line',
@@ -76,7 +76,7 @@ const VolumeChart = () => {
           color: '#ffffff',
           maxRotation: 0,
           minRotation: 0,
-          autoSkip: false, // 👈 show all labels
+          autoSkip: false,
         },
       },
       y: {
